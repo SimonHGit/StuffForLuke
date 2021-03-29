@@ -1,4 +1,517 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A?
+U 1 1 6061CF80
+P 1850 4050
+F 0 "A?" H 1850 2961 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 1850 2870 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 2000 3100 50  0001 L CNN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 1850 3050 50  0001 C CNN
+	1    1850 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 60620068
+P 13500 1000
+F 0 "D?" V 13539 883 50  0000 R CNN
+F 1 "LED" V 13448 883 50  0000 R CNN
+F 2 "" H 13500 1000 50  0001 C CNN
+F 3 "~" H 13500 1000 50  0001 C CNN
+	1    13500 1000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60624002
+P 13050 1000
+F 0 "R?" H 12980 954 50  0000 R CNN
+F 1 "R" H 12980 1045 50  0000 R CNN
+F 2 "" V 12980 1000 50  0001 C CNN
+F 3 "~" H 13050 1000 50  0001 C CNN
+	1    13050 1000
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_FET:2N7002E Q?
+U 1 1 606279CE
+P 14050 1550
+F 0 "Q?" H 14256 1596 50  0000 L CNN
+F 1 "2N7002E" H 14256 1505 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 14250 1475 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/ds30376.pdf" H 14050 1550 50  0001 L CNN
+	1    14050 1550
+	1    0    0    -1  
+$EndComp
+Text Notes 12450 750  0    50   ~ 0
+Circuit from:\nhttps://www.pipperr.de/dokuwiki/doku.php?id=elektronik:led_mosfet_schalten_modul
+$Comp
+L Device:R R?
+U 1 1 6062C950
+P 13050 1550
+F 0 "R?" V 13257 1550 50  0000 C CNN
+F 1 "R" V 13166 1550 50  0000 C CNN
+F 2 "" V 12980 1550 50  0001 C CNN
+F 3 "~" H 13050 1550 50  0001 C CNN
+	1    13050 1550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6062E54C
+P 13800 1150
+F 0 "R?" V 14007 1150 50  0000 C CNN
+F 1 "R" V 13916 1150 50  0000 C CNN
+F 2 "" V 13730 1150 50  0001 C CNN
+F 3 "~" H 13800 1150 50  0001 C CNN
+	1    13800 1150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 6062F349
+P 13500 1400
+F 0 "C?" H 13615 1446 50  0000 L CNN
+F 1 "C" H 13615 1355 50  0000 L CNN
+F 2 "" H 13538 1250 50  0001 C CNN
+F 3 "~" H 13500 1400 50  0001 C CNN
+	1    13500 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60635870
+P 6750 1200
+F 0 "R?" V 6957 1200 50  0000 C CNN
+F 1 "0" V 6866 1200 50  0000 C CNN
+F 2 "" V 6680 1200 50  0001 C CNN
+F 3 "~" H 6750 1200 50  0001 C CNN
+	1    6750 1200
+	0    -1   -1   0   
+$EndComp
+Text GLabel 12800 1000 0    50   BiDi ~ 0
+V_LEDs
+Wire Wire Line
+	12800 1000 12900 1000
+Wire Wire Line
+	13200 1000 13350 1000
+Wire Wire Line
+	13650 1000 14150 1000
+Wire Wire Line
+	14150 1000 14150 1150
+Wire Wire Line
+	13950 1150 14150 1150
+Connection ~ 14150 1150
+Wire Wire Line
+	14150 1150 14150 1350
+Wire Wire Line
+	13650 1150 13500 1150
+Wire Wire Line
+	13500 1150 13500 1250
+Wire Wire Line
+	13200 1550 13500 1550
+Wire Wire Line
+	13500 1550 13850 1550
+Connection ~ 13500 1550
+Text GLabel 12800 1750 0    50   BiDi ~ 0
+GND_LEDs
+Wire Wire Line
+	12800 1750 14150 1750
+Text GLabel 6950 850  2    50   BiDi ~ 0
+V_LEDs
+Text GLabel 6950 1200 2    50   BiDi ~ 0
+GND_LEDs
+$Comp
+L power:GND #PWR?
+U 1 1 606452B3
+P 6450 1200
+F 0 "#PWR?" H 6450 950 50  0001 C CNN
+F 1 "GND" H 6455 1027 50  0000 C CNN
+F 2 "" H 6450 1200 50  0001 C CNN
+F 3 "" H 6450 1200 50  0001 C CNN
+	1    6450 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 1200 6950 1200
+$Comp
+L power:+BATT #PWR?
+U 1 1 6064802B
+P 6450 850
+F 0 "#PWR?" H 6450 700 50  0001 C CNN
+F 1 "+BATT" H 6465 1023 50  0000 C CNN
+F 2 "" H 6450 850 50  0001 C CNN
+F 3 "" H 6450 850 50  0001 C CNN
+	1    6450 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 606494F2
+P 6750 850
+F 0 "R?" V 6957 850 50  0000 C CNN
+F 1 "0" V 6866 850 50  0000 C CNN
+F 2 "" V 6680 850 50  0001 C CNN
+F 3 "~" H 6750 850 50  0001 C CNN
+	1    6750 850 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6900 850  6950 850 
+Wire Wire Line
+	6600 850  6450 850 
+Wire Wire Line
+	6450 1200 6600 1200
+Text GLabel 12800 1550 0    50   BiDi ~ 0
+LED_1
+Wire Wire Line
+	12800 1550 12900 1550
+Text GLabel 950  4350 0    50   BiDi ~ 0
+LED_1
+Wire Wire Line
+	950  4350 1350 4350
+Text GLabel 950  4450 0    50   BiDi ~ 0
+LED_2
+Text GLabel 950  4550 0    50   BiDi ~ 0
+LED_3
+Text GLabel 950  4650 0    50   BiDi ~ 0
+LED_4
+Wire Wire Line
+	950  4450 1350 4450
+Wire Wire Line
+	1350 4550 950  4550
+Wire Wire Line
+	950  4650 1350 4650
+Text GLabel 12800 2600 0    50   BiDi ~ 0
+LED_2
+Text GLabel 12800 3650 0    50   BiDi ~ 0
+LED_3
+Text GLabel 12800 4600 0    50   BiDi ~ 0
+LED_4
+$Comp
+L Device:LED D?
+U 1 1 60651D66
+P 13500 2050
+F 0 "D?" V 13539 1933 50  0000 R CNN
+F 1 "LED" V 13448 1933 50  0000 R CNN
+F 2 "" H 13500 2050 50  0001 C CNN
+F 3 "~" H 13500 2050 50  0001 C CNN
+	1    13500 2050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60651D6C
+P 13050 2050
+F 0 "R?" H 12980 2004 50  0000 R CNN
+F 1 "R" H 12980 2095 50  0000 R CNN
+F 2 "" V 12980 2050 50  0001 C CNN
+F 3 "~" H 13050 2050 50  0001 C CNN
+	1    13050 2050
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_FET:2N7002E Q?
+U 1 1 60651D72
+P 14050 2600
+F 0 "Q?" H 14256 2646 50  0000 L CNN
+F 1 "2N7002E" H 14256 2555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 14250 2525 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/ds30376.pdf" H 14050 2600 50  0001 L CNN
+	1    14050 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60651D78
+P 13050 2600
+F 0 "R?" V 13257 2600 50  0000 C CNN
+F 1 "R" V 13166 2600 50  0000 C CNN
+F 2 "" V 12980 2600 50  0001 C CNN
+F 3 "~" H 13050 2600 50  0001 C CNN
+	1    13050 2600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60651D7E
+P 13800 2200
+F 0 "R?" V 14007 2200 50  0000 C CNN
+F 1 "R" V 13916 2200 50  0000 C CNN
+F 2 "" V 13730 2200 50  0001 C CNN
+F 3 "~" H 13800 2200 50  0001 C CNN
+	1    13800 2200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60651D84
+P 13500 2450
+F 0 "C?" H 13615 2496 50  0000 L CNN
+F 1 "C" H 13615 2405 50  0000 L CNN
+F 2 "" H 13538 2300 50  0001 C CNN
+F 3 "~" H 13500 2450 50  0001 C CNN
+	1    13500 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13200 2050 13350 2050
+Wire Wire Line
+	13650 2050 14150 2050
+Wire Wire Line
+	14150 2050 14150 2200
+Wire Wire Line
+	13950 2200 14150 2200
+Connection ~ 14150 2200
+Wire Wire Line
+	14150 2200 14150 2400
+Wire Wire Line
+	13650 2200 13500 2200
+Wire Wire Line
+	13500 2200 13500 2300
+Wire Wire Line
+	13200 2600 13500 2600
+Wire Wire Line
+	13500 2600 13850 2600
+Connection ~ 13500 2600
+Wire Wire Line
+	12800 2800 14150 2800
+$Comp
+L Device:LED D?
+U 1 1 60654B93
+P 13500 3100
+F 0 "D?" V 13539 2983 50  0000 R CNN
+F 1 "LED" V 13448 2983 50  0000 R CNN
+F 2 "" H 13500 3100 50  0001 C CNN
+F 3 "~" H 13500 3100 50  0001 C CNN
+	1    13500 3100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60654B99
+P 13050 3100
+F 0 "R?" H 12980 3054 50  0000 R CNN
+F 1 "R" H 12980 3145 50  0000 R CNN
+F 2 "" V 12980 3100 50  0001 C CNN
+F 3 "~" H 13050 3100 50  0001 C CNN
+	1    13050 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_FET:2N7002E Q?
+U 1 1 60654B9F
+P 14050 3650
+F 0 "Q?" H 14256 3696 50  0000 L CNN
+F 1 "2N7002E" H 14256 3605 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 14250 3575 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/ds30376.pdf" H 14050 3650 50  0001 L CNN
+	1    14050 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60654BA5
+P 13050 3650
+F 0 "R?" V 13257 3650 50  0000 C CNN
+F 1 "R" V 13166 3650 50  0000 C CNN
+F 2 "" V 12980 3650 50  0001 C CNN
+F 3 "~" H 13050 3650 50  0001 C CNN
+	1    13050 3650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60654BAB
+P 13800 3250
+F 0 "R?" V 14007 3250 50  0000 C CNN
+F 1 "R" V 13916 3250 50  0000 C CNN
+F 2 "" V 13730 3250 50  0001 C CNN
+F 3 "~" H 13800 3250 50  0001 C CNN
+	1    13800 3250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60654BB1
+P 13500 3500
+F 0 "C?" H 13615 3546 50  0000 L CNN
+F 1 "C" H 13615 3455 50  0000 L CNN
+F 2 "" H 13538 3350 50  0001 C CNN
+F 3 "~" H 13500 3500 50  0001 C CNN
+	1    13500 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13200 3100 13350 3100
+Wire Wire Line
+	13650 3100 14150 3100
+Wire Wire Line
+	14150 3100 14150 3250
+Wire Wire Line
+	13950 3250 14150 3250
+Connection ~ 14150 3250
+Wire Wire Line
+	14150 3250 14150 3450
+Wire Wire Line
+	13650 3250 13500 3250
+Wire Wire Line
+	13500 3250 13500 3350
+Wire Wire Line
+	13200 3650 13500 3650
+Wire Wire Line
+	13500 3650 13850 3650
+Connection ~ 13500 3650
+Wire Wire Line
+	12800 3850 14150 3850
+$Comp
+L Device:LED D?
+U 1 1 60657B6B
+P 13500 4050
+F 0 "D?" V 13539 3933 50  0000 R CNN
+F 1 "LED" V 13448 3933 50  0000 R CNN
+F 2 "" H 13500 4050 50  0001 C CNN
+F 3 "~" H 13500 4050 50  0001 C CNN
+	1    13500 4050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60657B71
+P 13050 4050
+F 0 "R?" H 12980 4004 50  0000 R CNN
+F 1 "R" H 12980 4095 50  0000 R CNN
+F 2 "" V 12980 4050 50  0001 C CNN
+F 3 "~" H 13050 4050 50  0001 C CNN
+	1    13050 4050
+	0    1    1    0   
+$EndComp
+$Comp
+L Transistor_FET:2N7002E Q?
+U 1 1 60657B77
+P 14050 4600
+F 0 "Q?" H 14256 4646 50  0000 L CNN
+F 1 "2N7002E" H 14256 4555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 14250 4525 50  0001 L CIN
+F 3 "http://www.diodes.com/assets/Datasheets/ds30376.pdf" H 14050 4600 50  0001 L CNN
+	1    14050 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60657B7D
+P 13050 4600
+F 0 "R?" V 13257 4600 50  0000 C CNN
+F 1 "R" V 13166 4600 50  0000 C CNN
+F 2 "" V 12980 4600 50  0001 C CNN
+F 3 "~" H 13050 4600 50  0001 C CNN
+	1    13050 4600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60657B83
+P 13800 4200
+F 0 "R?" V 14007 4200 50  0000 C CNN
+F 1 "R" V 13916 4200 50  0000 C CNN
+F 2 "" V 13730 4200 50  0001 C CNN
+F 3 "~" H 13800 4200 50  0001 C CNN
+	1    13800 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60657B89
+P 13500 4450
+F 0 "C?" H 13615 4496 50  0000 L CNN
+F 1 "C" H 13615 4405 50  0000 L CNN
+F 2 "" H 13538 4300 50  0001 C CNN
+F 3 "~" H 13500 4450 50  0001 C CNN
+	1    13500 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13200 4050 13350 4050
+Wire Wire Line
+	13650 4050 14150 4050
+Wire Wire Line
+	14150 4050 14150 4200
+Wire Wire Line
+	13950 4200 14150 4200
+Connection ~ 14150 4200
+Wire Wire Line
+	14150 4200 14150 4400
+Wire Wire Line
+	13650 4200 13500 4200
+Wire Wire Line
+	13500 4200 13500 4300
+Wire Wire Line
+	13200 4600 13500 4600
+Wire Wire Line
+	13500 4600 13850 4600
+Connection ~ 13500 4600
+Wire Wire Line
+	12800 4800 14150 4800
+Text GLabel 12800 2800 0    50   BiDi ~ 0
+GND_LEDs
+Text GLabel 12800 3850 0    50   BiDi ~ 0
+GND_LEDs
+Text GLabel 12800 4800 0    50   BiDi ~ 0
+GND_LEDs
+Text GLabel 12800 2050 0    50   BiDi ~ 0
+V_LEDs
+Text GLabel 12800 3100 0    50   BiDi ~ 0
+V_LEDs
+Text GLabel 12800 4050 0    50   BiDi ~ 0
+V_LEDs
+Wire Wire Line
+	12800 2050 12900 2050
+Wire Wire Line
+	12900 2600 12800 2600
+Wire Wire Line
+	12800 3100 12900 3100
+Wire Wire Line
+	12900 3650 12800 3650
+Wire Wire Line
+	12800 4050 12900 4050
+Wire Wire Line
+	12900 4600 12800 4600
+$Comp
+L power:+5V #PWR?
+U 1 1 60688D87
+P 5200 800
+F 0 "#PWR?" H 5200 650 50  0001 C CNN
+F 1 "+5V" H 5215 973 50  0000 C CNN
+F 2 "" H 5200 800 50  0001 C CNN
+F 3 "" H 5200 800 50  0001 C CNN
+	1    5200 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR?
+U 1 1 6068AEBA
+P 4500 800
+F 0 "#PWR?" H 4500 650 50  0001 C CNN
+F 1 "+BATT" H 4515 973 50  0000 C CNN
+F 2 "" H 4500 800 50  0001 C CNN
+F 3 "" H 4500 800 50  0001 C CNN
+	1    4500 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 800  4500 800 
 $EndSCHEMATC
